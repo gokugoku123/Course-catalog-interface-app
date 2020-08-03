@@ -1,0 +1,54 @@
+<%- include("partials/header") %>
+
+<%- include("partials/navigation") %>
+
+<div class="container">
+    
+    <h1> Course Detail </h1>
+
+    <div class="card general-card">
+        <h3 class="gc-child"> Title : <%= course.cName %> </h3>
+        <h5 class="gc-child"> Id : <%= course.cId %> </h5>
+        <h5 class="gc-child"> Rating: <%= course.rating %> </h5>
+        <h5 class="gc-child"> Duration : <%= course.duration %> hrs </h5>
+        <div class="card-nav-box gc-child">
+            <a role="button" href="/courses/get/<%=course.cId%>" class="btn more">More</a>
+            <a role="button" href="/courses/updatecourse/<%=course.cId%>" class="btn update">Update</a>
+            <a role="button" href="/courses/deletecourse/<%=course.cId%>" class="btn delete">Remove</a>
+        </div>
+    </div>
+</div>
+
+
+<hr class="w-50 border-line mx-auto">
+
+<div class="container p-4">
+    <h4 class="mb-3">Enroll to this course</h4>
+    <form action="/courses/update/enroll/<%=course.cId%>" class="d-flex" method="post">
+        <input type="text" class="w-30 form-control enroll-form" required name="studentId" placeholder="Student ID">
+        <button class="btn enroll" type="submit">Enroll</button>
+    </form>
+</div>
+
+<div class="container">
+    
+    <% if (enrolledStudents == null || enrolledStudents.length < 1) { %>
+        <div class="jumbotron">
+            <h1 class="display-4">0 Students Enrolled </h1>
+            <p class="lead"> Currently there are no students enrolled in this course</p>
+            <hr class="my-4">
+        </div>
+    <% } else { %>
+    <% enrolledStudents.forEach(student => { %>
+        <div class="card general-card">
+            <h3 class="gc-child"> Name : <%= student.sName %> </h3>
+            <h5 class="gc-child"> Id : <%= student.sId %> </h5>
+            <h5 class="gc-child mb-3"> Email: <%= student.email %> </h5>
+            <div class="card-nav-box gc-child">
+                <a href="/courses/update/deenroll/<%=course.cId%>/<%=student.sId%>" class="btn btn-danger">DeEnroll</a>
+            </div>
+        </div>
+    <% })} %>
+</div>
+
+<%- include("partials/footer") %>

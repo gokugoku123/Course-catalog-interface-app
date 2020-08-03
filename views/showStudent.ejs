@@ -1,0 +1,24 @@
+
+<%- include("partials/header") %>
+
+<%- include("partials/navigation") %>
+
+
+<div class="container">
+     
+    <h1 class="cl-heading text-center"> Student Detail </h1>
+    <div class="card general-card">
+        <h3 class="gc-child"> Name : <%= student.sName %> </h3>
+        <h5 class="gc-child"> Id : <%= student.sId %> </h5>
+        <h5 class="gc-child mb-3"> Email: <%= student.email %> </h5>
+        <div class="card-nav-box gc-child">
+            <a role="button" href="/students/get/<%=student.sId%>" class="btn more">More</a>
+            <a role="button" href="/students/updatestudent/<%=student.sId%>" class="btn update">Update</a>
+            <a role="button" href="/students/deletestudent/<%=student.sId%>" class="btn delete">Remove</a>
+        </div>
+    </div>
+</div>
+
+
+
+<%- include("partials/footer") %>

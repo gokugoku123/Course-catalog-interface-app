@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color:lavender;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color:lavender;
+}
+body {
+    padding-top: 1.5em;
+}
+
+/* ****************** General Items ************************ */
+.courses {
+    background-color: tomato;
+}
+
+.students {
+    background-color: dodgerblue;
+}
+
+.home {
+    background-color: steelblue;
+    color: white;
+}
+
+.add {
+    margin: 1em auto !important ;
+    background-color: lightseagreen;
+}
+
+.more {
+    background-color: rgb(235, 235, 88);
+    color: black;
+    font-weight: 500;
+}
+
+.update {
+    background-color: salmon;
+    color: black;
+    font-weight: 500;
+}
+
+.delete {
+    background-color: crimson;
+    color: white;
+}
+
+.enroll {
+    background-color: yellowgreen;
+    padding: 0.5em 1em;
+}
+
+.general-content-btn {
+    padding : 1em;
+    margin: 0.5em 1em;
+    font-size: 1.3em;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
+
+.cl-heading {
+    margin: 2em 0 0.5em;
+    padding: 0.6em 0.2em;
+    background-image: linear-gradient(45deg, dodgerblue, lightblue);
+    border-radius: 0.2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+}
+
+.general-card {
+    background-color:lightskyblue;
+    padding: 2.5em;
+    border-radius: 0.8em;
+    margin-bottom: 1em;
+}
+
+.gc-child {
+    background-color: lightskyblue;
+    color: rgb(26, 25, 25);
+    line-height: 1.2em;
+    letter-spacing: 0.04em;
+}
+
+.card-nav-btn {
+    margin-right: 0.5em;
+    padding: 0.5em 1em;
+}
+
+.border-line {
+    margin-top: 4em;
+    border-top: 0.5em solid tomato;
+    border-radius: 0.3em 0.3em;
+}
+
+/* ****************** Home Page End********************** */
+
+.home-heading-box {
+    padding : 4em 2.8em 2.8em; 
+    height: 70%;
+    border-radius: 0.6em;
+    text-align: center;
+    vertical-align: middle;
+    background-color:lavender;
+}
+
+.home-heading-box h1 {
+    margin-bottom: 1em;
+    font-size: 3.2em;
+    letter-spacing: 0.2em;
+}
+
+.home-heading-box h3 {
+    margin-bottom: 2em;
+}
+
+.home-navigation-box {
+    padding: 1.4em;
+}
+/* ****************** Home Page End********************** */
+
+/* ****************** Navigation Partial Start********************** */
+.navigation-box {
+    margin: 2em auto;
+}
+/* ****************** Forms Start********************** */
+
+.form-control {
+    padding: 1.5em;
+    background-color: rgb(187, 191, 196);
+    color: black;
+    font-weight: 500;
+}
+
+.form-control:focus {
+    background-color: rgb(175, 225, 245);
+    transition: background-color 0.5s;
+}
+
+.enroll-form {
+    width: 40%;
+    margin-right: 0.5em;
+}
+
+/* ****************** Forms End********************** */

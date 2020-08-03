@@ -1,0 +1,22 @@
+<%- include("partials/header") %>
+
+<%- include("partials/navigation") %>
+
+
+    <div class="container">
+        <h2 class="cl-heading text-center">Add A New Student</h2>
+        <form action="/students/addstudent"  method="post">
+            <label for="sId">Student ID</label>
+            <input type="text" required id="sId" name="sId" class="form-control mb-2" placeholder="Student ID">
+            <label for="sName">Student name</label>
+            <input type="text" required id="sName" name="sName" class="form-control mb-2" placeholder="Student Name">
+            <label for="email">Email Address</label>
+            <input type="email" required id="email" name="email" class="form-control mb-3" placeholder="Student Email">
+
+            <button class="btn add" type="submit">Add Student</button>
+
+        </form>
+
+    </div>
+
+<%- include("partials/footer") %>

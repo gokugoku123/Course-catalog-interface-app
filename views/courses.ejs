@@ -1,0 +1,35 @@
+<%- include("partials/header") %>
+
+<%- include("partials/navigation") %>
+
+
+<div class="container">
+    <h1 class="cl-heading text-center">Courses</h1>
+    <br>
+
+    <% if (courses == null || courses.length < 1) { %>
+        <div class="jumbotron">
+            <h1 class="display-4">0 Courses Registered </h1>
+            <p class="lead"> Currently there are no courses created</p>
+            <hr class="my-4">
+            <a href="/courses/addcourse" class="btn general-content-btn add">Add New Course</a>
+        </div>
+    <% } else { %>
+        <a href="/courses/addcourse" class="btn general-content-btn add mb-4">Add Course</a>
+        <% courses.forEach(function(course) { %>
+            <div class="card general-card">
+                <h3 class="gc-child"> Title : <%= course.cName %> </h3>
+                <h5 class="gc-child"> Id : <%= course.cId %> </h5>
+                <h5 class="gc-child"> Rating: <%= course.rating %> </h5>
+                <h5 class="mb-4 gc-child"> Duration : <%= course.duration %> hrs </h5>
+                <div class="card-nav-box gc-child">
+                    <a role="button" href="/courses/get/<%=course.cId%>" class="btn card-nav-btn more">More</a>
+                    <a role="button" href="/courses/updatecourse/<%=course.cId%>" class="btn card-nav-btn update">Update</a>
+                    <a role="button" href="/courses/deletecourse/<%=course.cId%>" class="btn card-nav-btn delete">Remove</a>
+                </div>
+            </div>
+        <% }) %>
+    <% } %>
+</div>
+
+<%- include("partials/footer") %>

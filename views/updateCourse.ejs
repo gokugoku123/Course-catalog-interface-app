@@ -1,0 +1,25 @@
+<%- include("partials/header") %>
+
+<%- include("partials/navigation") %>
+
+
+    <div class="container">
+        <h2 class="cl-heading text-center">Update Course</h2>
+        <form action="/courses/updatecourse/<%= course.cId %>"  method="post">
+            
+            <label for="cId">Course ID</label>
+            <input type="text" id="cId" required name="cId" class="form-control mb-2" value="<%= course.cId %>" placeholder="Course ID">
+            <label for="cName">Course Name</label>
+            <input type="text" id="cName" required name="cName" class="form-control mb-2" value="<%= course.cName %>" placeholder="Course Title">
+            <label for="rating">Rating</label>
+            <input type="text" id="rating" required name="rating" class="form-control mb-2" value="<%= course.rating %>" placeholder="Course Rating">
+            <label for="duration">Duration</label>
+            <input type="text" id="duration" required name="duration" class="form-control mb-4" value="<%= course.duration %>" placeholder="Course Rating">
+
+            <button class="btn update" type="submit">Update Course</button>
+
+        </form>
+
+    </div>
+
+<%- include("partials/footer") %>
